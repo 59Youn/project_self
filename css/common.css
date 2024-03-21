@@ -1,0 +1,19 @@
+.mw {
+  max-width: 1440px;
+  width: calc(100% - 7.75rem);
+  margin: auto;
+}
+
+.hd {
+  border: 1px solid red;
+}
+.hd .banner > * {
+  border: 1px solid green;
+}
+.hd .banner {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 7px 0;
+}
