@@ -13,6 +13,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/common.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./js/common.js" defer />
@@ -34,7 +37,7 @@
         </div>
       </nav>
       <div class="banner">
-        <div class="">
+        <div class="personal">
           <span>Phone Number: 956 742 455 678</span>
           <span>Email:info@ddsgnr.com</span>
         </div>
@@ -49,14 +52,12 @@
 
     <!-- section.mainVisual 영역 -->
     <section class="mainVisual">
-      <div>
+      <div class="intro">
         <h2>Learn new skills online with ease</h2>
         <p>Discover a wide range of courses covering a variety of subjects, taught by expert instructors.</p>
         <a href="#">Start learning now</a>
         <a href="#">Explore Courses</a>
       </div>
-      <!-- 배경 이미지는 ::after 를 사용할 지 생각해보기 -->
-      <div><img src="./img/mainVisual.svg" alt="mainVisual 이미지" /></div>
     </section>
 
     <!-- section.logo 영역 -->
@@ -84,9 +85,9 @@
       </ul>
     </section>
 
-    <!-- section.discover 영역 -->
-    <section class="discover">
-      <div class="wrap">
+    <!-- section.secondVisual 영역 -->
+    <section class="secondVisual">
+      <div class="intro">
         <h2>Discover a wide range of courses covering a variety of subjects, taught by expert instructors.</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
@@ -102,13 +103,14 @@
         </p>
         <a href="#" class="more">Explore Courses</a>
       </div>
-      <!-- 배경 이미지는 ::after 를 사용할 지 생각해보기 -->
-      <div><img src="./img/discover.svg" alt="discover 이미지" /></div>
     </section>
 
     <!-- section.courses 영역 -->
     <section class="courses">
-      <h2><strong>Courses</strong><span>Your Ultimate Guide to learning</span></h2>
+      <h2>
+        <strong>Courses</strong>
+        <span>Your Ultimate Guide to learning</span>
+      </h2>
       <div class="btns">
         <button>Popular</button>
         <button>Recommended</button>
@@ -124,90 +126,78 @@
             <span>Enroll Now</span>
             <strong>$400</strong>
             <img src="./img/courses_1.svg" alt="이미지1" />
-            <a href="">상세페이지</a>
+            <a href="#">상세페이지</a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <span>Programmimg</span>
+            <i class="fa-solid fa-star"> 5.0</i>
+            <h3>Introduction to Python</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+            <span>Enroll Now</span>
+            <strong>$400</strong>
+            <img src="./img/courses_2.svg" alt="이미지2" />
+            <a href="#">상세페이지</a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <span>Business</span>
+            <i class="fa-solid fa-star"> 5.0</i>
+            <h3>Data Analysis for Beginners</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+            <span>Enroll Now</span>
+            <strong>$400</strong>
+            <img src="./img/courses_3.svg" alt="이미지3" />
+            <a href="#">상세페이지</a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <span>Art</span>
+            <i class="fa-solid fa-star"> 5.0</i>
+            <h3>Art Specialization</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+            <span>Enroll Now</span>
+            <strong>$400</strong>
+            <img src="./img/courses_4.svg" alt="이미지4" />
+            <a href="#">상세페이지</a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <span>Law</span>
+            <i class="fa-solid fa-star"> 5.0</i>
+            <h3>Rule of Law</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+            <span>Enroll Now</span>
+            <strong>$400</strong>
+            <img src="./img/courses_5.svg" alt="이미지5" />
+            <a href="#">상세페이지</a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <span>Tech</span>
+            <i class="fa-solid fa-star"> 5.0</i>
+            <h3>Introduction to webflow</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+            <a href="#">Enroll Now</a>
+            <strong>$400</strong>
+            <img src="./img/courses_6.svg" alt="이미지6" />
+            <a href="#">상세페이지</a>
           </div>
         </li>
       </ul>
-      <!-- 
-      <div class="card">
-        <img src="./img/courses_2.svg" alt="이미지2" />
-        <div class="catagory">
-          <span>Programmimg</span>
-          <i class="fa-solid fa-star"> 5.0</i>
-        </div>
-        <h3>Introduction to Python</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-        <a href="#">Enroll Now</a>
-        <strong>$400</strong>
-      </div>
-      <div class="card">
-        <img src="./img/courses_3.svg" alt="이미지3" />
-        <div class="catagory">
-          <span>Business</span>
-          <i class="fa-solid fa-star"> 5.0</i>
-        </div>
-        <h3>Data Analysis for Beginners</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-        <a href="#">Enroll Now</a>
-        <strong>$400</strong>
-      </div>
-      <div class="card">
-        <img src="./img/courses_4.svg" alt="이미지4" />
-        <div class="catagory">
-          <span>Art</span>
-          <i class="fa-solid fa-star"> 5.0</i>
-        </div>
-        <h3>Art Specialization</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-        <a href="#">Enroll Now</a>
-        <strong>$400</strong>
-      </div>
-      <div class="card">
-        <img src="./img/courses_5.svg" alt="이미지5" />
-        <div class="catagory">
-          <span>Law</span>
-          <i class="fa-solid fa-star"> 5.0</i>
-        </div>
-        <h3>Rule of Law</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-        <a href="#">Enroll Now</a>
-        <strong>$400</strong>
-      </div>
-      <div class="card">
-        <img src="./img/courses_6.svg" alt="이미지6" />
-        <div class="catagory">
-          <span>Tech</span>
-          <i class="fa-solid fa-star"> 5.0</i>
-        </div>
-        <h3>Introduction to webflow</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-        <a href="#">Enroll Now</a>
-        <strong>$400</strong>
-      </div> -->
     </section>
 
     <!-- section.review 영역 -->
     <section class="review">
-      <div class="title">
-        <h2>What Our Student Say</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <!-- swiper 오류 해결하기 -->
+      <h2>
+        <strong>What Our Student Say</strong>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+      </h2>
       <div class="swiper reviewSlide">
         <ul class="swiper-wrapper">
           <li class="swiper-slide">
@@ -305,10 +295,10 @@
           <li class="swiper-slide">Slide 8</li>
           <li class="swiper-slide">Slide 9</li>
         </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </section>
 
     <!-- footer 영역 -->
@@ -321,7 +311,6 @@
         <div class="email">
           <input type="email" id="email" placeholder="Enter your email" />
           <input type="submit" value="Subscribe" />
-
           <span>By subscribing you agree to with our </span>
           <a href="#">Privacy Policy</a>
         </div>

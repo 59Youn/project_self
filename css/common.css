@@ -1,19 +1,199 @@
-.mw {
+@charset 'utf-8';
+/* padding: 0 4rem; */
+
+body {
+  font-family: 'Roboto', sans-serif;
   max-width: 1440px;
-  width: calc(100% - 7.75rem);
   margin: auto;
 }
 
+/* header 영역 */
 .hd {
-  border: 1px solid red;
+  position: relative;
+  padding-top: 54px;
 }
-.hd .banner > * {
-  border: 1px solid green;
-}
-.hd .banner {
-  border: 1px solid blue;
+.hd nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 12px;
-  padding: 7px 0;
+  align-items: center;
+  padding: 0 4rem;
+  border-bottom: 1px solid #676767;
+  height: 72px;
+}
+.hd .menu a {
+  margin: 0 1rem;
+  padding: 20px 14px;
+  position: relative;
+}
+.hd .menu a:hover {
+  font-weight: bold;
+}
+.hd .menu a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #676767;
+  bottom: 8px;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.hd .menu a:hover::before {
+  opacity: 1;
+}
+.hd .person a {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  transition: 0.3s;
+}
+.hd .person a:nth-of-type(2) {
+  margin-left: 1rem;
+  color: white;
+  background-color: black;
+}
+.hd .person a:nth-of-type(1):hover {
+  color: white;
+  background-color: black;
+}
+.hd .person a:nth-of-type(2):hover {
+  color: black;
+  background-color: transparent;
+}
+.hd .banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  position: absolute;
+  width: 100%;
+  height: 54px;
+  top: 0;
+  border-bottom: 2px solid #676767;
+}
+.hd .personal {
+  font-size: 14px;
+}
+.hd .personal > span:nth-of-type(1) {
+  padding-right: 1rem;
+}
+.hd .personal > span:nth-of-type(2) {
+  padding: 0.5rem 1rem;
+  border-left: 1px solid #676767;
+}
+.hd .social {
+  font-size: 20px;
+}
+.hd .social i {
+  margin-left: 12px;
+}
+
+/* section.mainVisual 영역 */
+.mainVisual {
+  height: 900px;
+  position: relative;
+  padding-top: 300px;
+}
+.mainVisual .intro {
+  width: 50%;
+  padding: 0 4rem;
+}
+.mainVisual .intro h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3.5rem;
+  line-height: 120%;
+}
+.mainVisual .intro p {
+  font-size: 18px;
+  line-height: 150%;
+  padding: 2rem 0;
+}
+.mainVisual .intro a {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin-right: 0.75rem;
+  padding: 1rem 1.5rem;
+  transition: 0.3s;
+}
+.mainVisual .intro a:nth-of-type(1) {
+  color: white;
+  background-color: black;
+}
+.mainVisual .intro a:nth-of-type(1):hover {
+  color: black;
+  background-color: transparent;
+}
+.mainVisual .intro a:nth-of-type(2):hover {
+  color: white;
+  background-color: black;
+}
+.mainVisual::before {
+  content: '';
+  background-image: url(../img/mainVisual.svg);
+  background-size: cover;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  /* object-fit: cover; */
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.mainVisual .intro {
+  display: block;
+  align-items: center;
+}
+
+/* section.logo 영역 */
+.logo {
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  height: 228px;
+  background-color: #f7f7f7;
+}
+.logo h3 {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 140%;
+}
+.logo ul {
+  display: flex;
+  justify-content: space-between;
+}
+.logo ul li {
+  padding: 0.5rem 0.75rem;
+}
+
+/* section.secondVisual 영역 */
+.secondVisual {
+  height: 864px;
+  position: relative;
+  padding-top: 155px;
+}
+.secondVisual .intro {
+  width: 50%;
+  padding: 0 4rem;
+}
+.secondVisual::before {
+  border: 1px solid red;
+  content: '';
+  background-image: url(../img/secondVisual.svg);
+  background-size: cover;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  top: 112px;
+  bottom: 112px;
+  right: 4rem;
+  z-index: -1;
 }
