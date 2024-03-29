@@ -2,11 +2,11 @@ var swiper = new Swiper('.reviewSlide', {
   slidesPerView: 3,
   spaceBetween: 30,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.pg1',
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.next1',
+    prevEl: '.prev1',
   },
 });
