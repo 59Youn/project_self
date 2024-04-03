@@ -1,7 +1,12 @@
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* padding: 0 5rem; */
+:root {
+  --color-bk: #000000;
+  --color-gr: #676767;
+  --color-lg: #f7f7f7;
+  --color-wh: #ffffff;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -19,7 +24,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 5rem;
-  border-bottom: 1px solid #676767;
+  border-bottom: 1px solid var(--color-gr);
   height: 72px;
 }
 .hd .menu a {
@@ -35,7 +40,7 @@ body {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #676767;
+  background-color: var(--color-gr);
   bottom: 8px;
   left: 0;
   opacity: 0;
@@ -45,22 +50,28 @@ body {
   opacity: 1;
 }
 .hd .person a {
-  border: 1px solid black;
+  border: 1px solid var(--color-bk);
   border-radius: 0.5rem;
   padding: 0.75rem 1.25rem;
   transition: 0.3s;
 }
-.hd .person a:nth-of-type(2) {
-  margin-left: 1rem;
-  color: white;
-  background-color: black;
+.hd .person a:nth-of-type(1) {
+  background-color: var(--color-wh);
 }
 .hd .person a:nth-of-type(1):hover {
-  color: white;
-  background-color: #676767;
+  color: var(--color-wh);
+  background-color: var(--color-gr);
+}
+.hd .person a:nth-of-type(2) {
+  margin-left: 1rem;
+  color: var(--color-wh);
+  background-color: var(--color-bk);
 }
 .hd .person a:nth-of-type(2):hover {
-  background-color: #676767;
+  background-color: var(--color-gr);
+}
+.hd .ham {
+  display: none;
 }
 .hd .banner {
   display: flex;
@@ -71,7 +82,7 @@ body {
   width: 100%;
   height: 54px;
   top: 0;
-  border-bottom: 2px solid #676767;
+  border-bottom: 2px solid var(--color-gr);
 }
 .hd .personal {
   font-size: 14px;
@@ -81,7 +92,7 @@ body {
 }
 .hd .personal > span:nth-of-type(2) {
   padding: 0.5rem 1rem;
-  border-left: 1px solid #676767;
+  border-left: 1px solid var(--color-gr);
 }
 .hd .social {
   font-size: 20px;
@@ -92,9 +103,11 @@ body {
 
 /* section.mainVisual 영역 */
 .mainVisual {
-  height: 900px;
   position: relative;
-  padding-top: 300px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 .mainVisual .intro {
   width: 50%;
@@ -115,52 +128,55 @@ body {
   padding: 2rem 0;
 }
 .mainVisual .intro a {
-  border: 1px solid black;
+  border: 1px solid var(--color-bk);
   border-radius: 0.5rem;
   display: inline-block;
-  margin-right: 0.75rem;
   padding: 1rem 1.5rem;
   transition: 0.3s;
 }
 .mainVisual .intro a:nth-of-type(1) {
-  color: white;
-  background-color: black;
+  color: var(--color-wh);
+  background-color: var(--color-bk);
+  margin: 0 0.75rem 0.75rem 0;
 }
 .mainVisual .intro a:nth-of-type(1):hover {
-  background-color: #676767;
+  background-color: var(--color-gr);
 }
 .mainVisual .intro a:nth-of-type(2):hover {
-  color: white;
-  background-color: #676767;
+  color: var(--color-wh);
+  background-color: var(--color-gr);
 }
 .mainVisual::before {
   content: '';
+  display: block;
   background-image: url(../img/mainVisual.svg);
   background-size: cover;
-  position: absolute;
+  background-position: center;
   width: 50%;
-  height: 100%;
-  top: 0;
-  right: 0;
+  height: 50vw;
   z-index: -1;
 }
 
 /* section.logo 영역 */
 .logo {
-  padding: 0 5rem;
+  padding: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
-  height: 228px;
-  background-color: #f7f7f7;
+  background-color: var(--color-lg);
+  overflow: hidden;
 }
-.logo h3 {
+.logo h3,
+.logo p {
   font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-style: normal;
   line-height: 140%;
+}
+.logo p {
+  display: none;
 }
 .logo ul {
   display: flex;
@@ -172,13 +188,17 @@ body {
 
 /* section.secondVisual 영역 */
 .secondVisual {
-  height: 864px;
-  position: relative;
-  padding-top: 155px;
+  height: 100vh;
+  padding: 155px 5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }
 .secondVisual .intro {
   width: 52%;
-  padding: 0 5rem;
+  display: block;
+  align-items: center;
 }
 .secondVisual .intro h2 {
   font-family: 'Roboto', sans-serif;
@@ -192,31 +212,27 @@ body {
   line-height: 150%;
   padding-top: 1.5rem;
 }
-.secondVisual .intro a {
-  border: 1px solid black;
+.secondVisual .more {
+  border: 1px solid var(--color-bk);
   border-radius: 0.5rem;
   display: inline-block;
   padding: 1rem 1.5rem;
   margin-top: 3rem;
-  background-color: black;
-  color: white;
+  background-color: var(--color-bk);
+  color: var(--color-wh);
   transition: 0.3s;
 }
 .secondVisual .intro a:hover {
-  background-color: #676767;
+  background-color: var(--color-gr);
 }
 .secondVisual::before {
   content: '';
+  display: block;
   background-image: url(../img/secondVisual.svg);
-  background-size: 100%, cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  padding-top: 50%;
-  width: 43%;
-  top: 112px;
-  bottom: 112px;
-  right: 5rem;
-  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  width: 45%;
+  height: 70vh;
 }
 
 /* section.courses 영역 */
@@ -248,9 +264,25 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 150%;
   padding: 0.5rem 1rem;
+  position: relative;
+}
+.courses .btns button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-gr);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.courses .btns button:hover::before,
+.courses .btns button:focus::before {
+  opacity: 1;
 }
 
 .courses .list {
@@ -258,14 +290,12 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 5rem;
-  /* position: relative; */
 }
 .courses .card {
-  background-color: #f7f7f7;
+  background-color: var(--color-lg);
   position: relative;
-  width: 416px;
-  height: 534px;
-  padding: 324px 16px 24px 16px;
+  width: 400px;
+  padding: 310px 18px 24px 18px;
   margin-bottom: 64px;
 }
 .courses .card img {
@@ -306,7 +336,7 @@ body {
 }
 .courses .card span:nth-of-type(3) {
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid var(--color-bk);
   border-radius: 5px;
   padding: 0.5rem 1rem;
   font-size: 16px;
@@ -314,8 +344,8 @@ body {
   transition: 0.3s;
 }
 .courses .card:hover span:nth-of-type(3) {
-  background-color: #676767;
-  color: white;
+  background-color: var(--color-gr);
+  color: var(--color-wh);
 }
 .courses .card strong {
   font-weight: bold;
@@ -334,21 +364,21 @@ body {
   justify-content: center;
 }
 .courses .more a {
-  border: 1px solid black;
+  border: 1px solid var(--color-bk);
   border-radius: 5px;
   padding: 0.5rem 1rem;
   line-height: 150%;
   transition: 0.3s;
 }
 .courses .more a:hover {
-  background-color: #676767;
-  color: white;
+  background-color: var(--color-gr);
+  color: var(--color-wh);
 }
 
 /* section.review 영역 */
 .review {
-  height: 804px;
-  padding: 112px 5rem;
+  height: 80vh;
+  padding: 90px 5rem 112px 5rem;
 }
 .review h2 strong {
   font-family: 'Roboto', sans-serif;
@@ -368,7 +398,7 @@ body {
   position: relative;
 }
 .review .reviewCard {
-  border: 1px solid black;
+  border: 1px solid var(--color-bk);
   border-radius: 5px;
   width: 100%;
   padding: 2rem;
@@ -403,16 +433,16 @@ body {
   bottom: -68px;
 }
 .review .swiper-pagination-bullet-active {
-  background-color: black;
+  background-color: var(--color-bk);
 }
 .review .next1,
 .review .prev1 {
   top: calc(100% + 40px);
   margin: 0;
-  color: black;
+  color: var(--color-bk);
   width: 48px;
   height: 48px;
-  border: 1px solid black;
+  border: 1px solid var(--color-bk);
   border-radius: 50%;
 }
 .review .next1 {
@@ -432,7 +462,7 @@ body {
 
 /* footer 영역 */
 footer {
-  border-top: 2px solid #676767;
+  border-top: 2px solid var(--color-gr);
   padding: 5rem;
 }
 footer .footTop {
@@ -444,7 +474,7 @@ footer .title {
 }
 footer .title strong {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
 }
 footer .box {
   display: flex;
@@ -459,13 +489,13 @@ footer .box input {
   line-height: 150%;
 }
 footer .box input:nth-of-type(2) {
-  background-color: white;
+  background-color: var(--color-wh);
   cursor: pointer;
   transition: 0.3s;
 }
 footer .box input:nth-of-type(2):hover {
-  color: white;
-  background-color: #676767;
+  color: var(--color-wh);
+  background-color: var(--color-gr);
 }
 footer .email span,
 footer .email a {
@@ -480,7 +510,7 @@ footer nav {
   margin: 80px 0;
 }
 footer nav img {
-  margin-right: 160px;
+  margin-right: 15%;
   align-self: flex-start;
 }
 footer .gnb {
@@ -494,7 +524,7 @@ footer .gnb li {
   white-space: nowrap;
 }
 footer .gnb li p {
-  font-weight: 500;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 footer .sub li {
@@ -505,7 +535,7 @@ footer .sub li:hover {
   text-decoration: underline;
 }
 footer .footBottom {
-  border-top: 1px solid #676767;
+  border-top: 1px solid var(--color-gr);
   padding-top: 33px;
   display: flex;
 }
@@ -520,4 +550,280 @@ footer .social {
 footer .social a {
   font-size: 22px;
   margin-left: 12px;
+}
+
+@media (max-width: 1430px) {
+  .courses .list {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* padding: 0 24px */
+  .hd {
+    padding: 0 24px;
+    position: relative;
+  }
+  .hd .menu,
+  .hd .person,
+  .hd .banner {
+    display: none;
+    position: fixed;
+  }
+  .hd .menu {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-left: 1px solid var(--color-gr);
+    left: 20%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 7rem;
+    z-index: 10;
+  }
+  .hd .menu a {
+    display: block;
+    margin: 1rem 2rem;
+    padding: 2rem 1rem;
+    font-size: 1.5rem;
+  }
+  .hd .person {
+    left: 20%;
+    padding: 3rem;
+    margin-top: 3rem;
+    z-index: 10;
+  }
+  .hd nav {
+    padding: 0;
+  }
+
+  .hd .ham {
+    display: block;
+    position: fixed;
+    top: 25px;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+    z-index: 20;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .hd .ham span {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-bk);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .hd .ham span:nth-of-type(1) {
+    top: 0;
+  }
+  .hd .ham span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hd .ham span:nth-of-type(3) {
+    top: calc(100% - 4px);
+  }
+  .hd .ham:hover {
+    transform: scale(1.2);
+  }
+  .hd .ham.on span:nth-of-type(1) {
+    transform: rotate(45deg);
+    transform-origin: left;
+    top: 3px;
+    left: 3px;
+  }
+  .hd .ham.on span:nth-of-type(2) {
+    display: none;
+  }
+  .hd .ham.on span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    transform-origin: left;
+    left: 4px;
+    top: calc(100% - 5px);
+  }
+
+  .mainVisual .intro {
+    padding: 0 5rem;
+  }
+
+  .logo,
+  .logo p {
+    display: block;
+  }
+  .logo h3 {
+    display: none;
+  }
+  .logo p {
+    display: block;
+  }
+  .logo ul li {
+    margin-top: 24px;
+  }
+
+  .secondVisual .intro p {
+    padding-top: 48px;
+  }
+  .secondVisual .intro p:nth-of-type(3) {
+    display: none;
+  }
+
+  footer .footBottom {
+    display: block;
+    text-align: center;
+  }
+  footer .links {
+    margin: 24px 0;
+  }
+  footer .social {
+    text-align: center;
+  }
+
+  .hd .menu.on,
+  .hd .person.on {
+    display: block;
+  }
+}
+
+@media (max-width: 1040px) {
+  .mainVisual .intro h2 {
+    font-size: 40px;
+  }
+  .mainVisual .intro p {
+    padding: 1rem 0;
+  }
+  .secondVisual .intro h2 {
+    font-size: 32px;
+  }
+  .secondVisual .intro p {
+    padding-top: 1.5rem;
+  }
+  .secondVisual .more {
+    margin-top: 2rem;
+  }
+  .courses .list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .courses .hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  /* padding: 0 1.5rem */
+  .mainVisual {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .mainVisual .intro {
+    width: 100%;
+    padding: 4rem 1.5rem;
+  }
+  .mainVisual .intro p {
+    padding: 2rem 0;
+  }
+  .mainVisual::before {
+    width: 100%;
+    height: 50vh;
+    z-index: -1;
+  }
+
+  .logo {
+    padding: 3rem 1.5rem;
+  }
+  .logo h3,
+  .logo p {
+    font-size: 18px;
+  }
+
+  .secondVisual {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    height: 150vh;
+    justify-content: center;
+  }
+  .secondVisual .intro {
+    width: 100%;
+    padding: 4rem 1.5rem;
+  }
+  .secondVisual::before {
+    width: 90%;
+    height: 70vh;
+    z-index: -1;
+  }
+
+  .courses {
+    padding: 5rem 1.5rem 4rem 1.5rem;
+  }
+  .courses h2 {
+    margin-bottom: 2rem;
+  }
+  .courses h2 strong {
+    font-size: 2.5rem;
+  }
+  .courses .list {
+    margin-top: 3rem;
+  }
+
+  .review {
+    height: 60vh;
+    padding: 3rem 1.5rem;
+  }
+  .review h2 strong {
+    font-size: 32px;
+  }
+  .review h2 span {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    padding: 3rem 1.5rem;
+    border: none;
+  }
+  footer .footTop,
+  footer .title strong,
+  footer .box,
+  footer nav,
+  footer .gnb {
+    display: block;
+  }
+  footer .footTop {
+    text-align: center;
+  }
+  footer .title strong {
+    margin-bottom: 1rem;
+  }
+  footer .title p {
+    margin-bottom: 1.5rem;
+  }
+  footer .box {
+    gap: 0;
+  }
+  footer .box input {
+    width: 100%;
+  }
+  footer .box input:nth-of-type(1) {
+    padding: 0.75rem 0;
+  }
+  footer .box input:nth-of-type(2) {
+    margin-top: 1rem;
+  }
+  footer nav {
+    text-align: center;
+    margin: 3rem;
+  }
+  footer nav img {
+    margin: 0;
+  }
+  footer .gnb li {
+    width: 100%;
+  }
+  footer .gnb > li {
+    margin: 2rem 0;
+  }
 }
