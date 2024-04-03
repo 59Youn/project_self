@@ -560,7 +560,6 @@ footer .social a {
 }
 
 @media (max-width: 1100px) {
-  /* padding: 0 24px */
   .hd {
     padding: 0 24px;
     position: relative;
@@ -596,6 +595,7 @@ footer .social a {
   }
   .hd nav {
     padding: 0;
+    transition: 0.3s;
   }
 
   .hd .ham {
@@ -714,7 +714,6 @@ footer .social a {
 }
 
 @media (max-width: 860px) {
-  /* padding: 0 1.5rem */
   .mainVisual {
     display: flex;
     flex-direction: column-reverse;
