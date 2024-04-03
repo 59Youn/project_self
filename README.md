@@ -10,3 +10,6 @@
 ![Swiper](https://img.shields.io/badge/swiper-6332F6.svg?&style=for-the-badge&logo=swiper&logoColor=white)
 
 ![웹](https://github.com/59Youn/project_self/assets/162939328/1537c83d-366b-4433-9640-3255a7a12f9f)
+
+![태블릿](https://github.com/59Youn/project_self/assets/162939328/e1a2f696-ab65-4f1b-91b5-44660f806c98)
+
