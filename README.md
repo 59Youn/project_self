@@ -1,4 +1,4 @@
-# 피그마를 활용한 웹사이트 클론코딩 📑
+# 피그마를 활용한 웹사이트 클론코딩 📚
 ## ✈️ 결과
 ![html5](https://img.shields.io/badge/html5-E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
 ![css3](https://img.shields.io/badge/css3-1572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
