@@ -11,31 +11,16 @@ ham.addEventListener('click', (e) => {
 });
 
 // section.courses 영역
-const popular = document.querySelector('.popular');
-const recommended = document.querySelector('.recommended');
-const price = document.querySelector('.price');
-const pop = document.querySelector('.pop');
-const rec = document.querySelector('.rec');
-const pri = document.querySelector('.pri');
-const list = document.querySelectorAll('.list');
+const btns = document.querySelector('.btns');
+btns.addEventListener('click', (e) => {
+  if (e.target.nodeName !== 'BUTTON') return;
+  const list = document.querySelectorAll('.courses .list');
+  const idx = e.target.dataset.idx;
 
-popular.addEventListener('click', () => {
   list.forEach((el) => {
     el.classList.remove('on');
   });
-  pop.classList.add('on');
-});
-recommended.addEventListener('click', () => {
-  list.forEach((el) => {
-    el.classList.remove('on');
-  });
-  rec.classList.add('on');
-});
-price.addEventListener('click', () => {
-  list.forEach((el) => {
-    el.classList.remove('on');
-  });
-  pri.classList.add('on');
+  list[idx].classList.add('on');
 });
 
 // section.review 영역
