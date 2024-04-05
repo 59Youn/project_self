@@ -272,6 +272,7 @@ body {
 .courses .btns {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .courses .btns button {
   border: none;
@@ -349,6 +350,7 @@ body {
 .courses .card p {
   line-height: 150%;
   margin-bottom: 1.5rem;
+  word-break: break-all;
 }
 .courses .card span:nth-of-type(3) {
   background-color: transparent;
@@ -424,6 +426,7 @@ body {
   font-size: 18px;
   line-height: 150%;
   margin: 1.5rem 0;
+  word-break: break-all;
 }
 .review .profile {
   display: flex;
@@ -707,10 +710,16 @@ footer .social a {
     text-align: center;
   }
   footer .links {
-    margin: 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .links a {
+    margin-top: 24px;
   }
   footer .social {
     text-align: center;
+    margin-top: 24px;
   }
 
   .hd .menu.on,
@@ -755,6 +764,7 @@ footer .social a {
   }
   .mainVisual .intro p {
     padding: 2rem 0;
+    word-break: break-all;
   }
   .mainVisual::before {
     width: 100%;
@@ -774,12 +784,15 @@ footer .social a {
     display: flex;
     flex-direction: column-reverse;
     padding: 0;
-    height: 150vh;
+    height: 130vh;
     justify-content: center;
   }
   .secondVisual .intro {
     width: 100%;
-    padding: 2rem 1.5rem 4rem 1.5rem;
+    padding: 4rem 1.5rem;
+  }
+  .secondVisual .intro p {
+    word-break: break-all;
   }
   .secondVisual::before {
     width: 90%;
@@ -799,10 +812,19 @@ footer .social a {
   .courses .list {
     margin-top: 3rem;
   }
+  .courses .card {
+    width: 100%;
+    text-overflow: ellipsis;
+  }
+  .courses .card img {
+    height: 55%;
+    object-fit: cover;
+  }
 
   .review {
-    height: 60vh;
+    height: 70vh;
     padding: 3rem 1.5rem;
+    /* align-content: center; */
   }
   .review h2 strong {
     font-size: 32px;
