@@ -1,14 +1,17 @@
 // 햄버거 버튼
 const ham = document.querySelector('.ham');
-const menu = document.querySelector('.menu');
-const person = document.querySelector('.person');
+ham.addEventListener('click', toggleMenu);
 
-ham.addEventListener('click', (e) => {
-  e.preventDefault();
+function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  const person = document.querySelector('.person');
+  const body = document.body;
+
   ham.classList.toggle('on');
   menu.classList.toggle('on');
   person.classList.toggle('on');
-});
+  body.classList.toggle('scrollLock');
+}
 
 // section.courses 영역
 const btns = document.querySelector('.btns');
